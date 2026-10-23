@@ -6,7 +6,7 @@ import fr from '@/locales/fr.json'
 const locale = getUserLanguage()
 
 const i18n = createI18n({
-    locale: locale == null ? 'fr' : locale,
+    locale: locale == null ? 'en' : locale,
     messages: { en, fr },
     fallbackLocale: 'en',
     fallbackWarn: false,
