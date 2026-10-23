@@ -21,6 +21,7 @@ nl: Nederlands
 fr: Français
 de: Deutsch
 translated-by: Translated by
+translator: Nico Van den Winckel
 about-me: >-
   Hi! My name is Nico and I love Core Space and Maladum. Ever since I first saw Core Space on 
   <a href="https://www.orderofgamers.com/games/core-space/" target="_blank">the Esoteric Order 
@@ -92,15 +93,15 @@ ranged: >-
 ranged_1: >-
   <strong>Short range</strong>; 
   This weapon can be used to make a ranged attack up to 5 squares away - the length of 
-  the short ruler. The weapon will roll {0} dice shown.
+  the short ruler. The weapon will roll {dice} dice shown.
 ranged_2: >-
   <strong>Medium range;</strong> 
   This weapon can be used to make a ranged attack from 5-13 squares away - the length of 
-  the longer ruler. The weapon will roll {0} dice shown.
+  the longer ruler. The weapon will roll {dice} dice shown.
 ranged_3: >-
   <strong>Long range;</strong>
   This weapon can be used to make a ranged attack 14 squares or more away - anything 
-  further than the long ruler. The weapon will roll {0} dice shown.
+  further than the long ruler. The weapon will roll {dice} dice shown.
 x_dice: >-
   <strong>+X dice;</strong>
   This is usually found alongside the <strong>Channel icon</strong>. The attack may roll an 

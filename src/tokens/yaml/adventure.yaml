@@ -33,7 +33,7 @@
   rarity: exclusive
   color: blue
   size: lg
-  cafting: ["S", "S", "K", "G"]
+  crafting: ["S", "S", "K", "G"]
   sell: 10
   attributes:
     - sharp

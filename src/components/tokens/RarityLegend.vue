@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
+import Star from '@/components/icons/Star.vue'
+import { TokenRarityColorEnum } from '@/tokens/types.ts'
 
 const props = defineProps<{
     tag: string
@@ -9,16 +11,16 @@ const props = defineProps<{
 
 const { t } = useI18n()
 const text = computed(() => t(`rarity_${props.value}`))
-const icon = computed(() => {
+const iconColor = computed(() => {
     switch (props.value) {
         case 'common':
-            return 'change_history'
+            return TokenRarityColorEnum.common
         case 'uncommon':
-            return 'square'
+            return TokenRarityColorEnum.uncommon
         case 'rare':
-            return 'circle'
+            return TokenRarityColorEnum.rare
         case 'exclusive':
-            return 'star'
+            return TokenRarityColorEnum.exclusive
         default:
             return ''
     }
@@ -27,9 +29,13 @@ const icon = computed(() => {
 
 <template>
     <component :is="tag" class="icon-description">
-        <span :class="value" class="rarity material-symbols-rounded">{{
-            icon
-        }}</span>
+        <span :class="value" class="rarity material-symbols-rounded"
+            ><Star
+                v-if="iconColor"
+                :class="value"
+                :color="iconColor"
+                size="large"
+        /></span>
         <span v-html="text"></span>
     </component>
 </template>

@@ -7,10 +7,12 @@ import {
     FilterFormType,
     TokenColor,
     TokenRarity,
+    TokenRarityColorEnum,
     TokenSize,
 } from '@/tokens/types'
 import { useTokens } from '@/store/tokens'
 import MinMaxInput from '@/components/forms/MinMaxInput.vue'
+import Star from '@/components/icons/Star.vue'
 
 const tokens = useTokens()
 
@@ -164,9 +166,14 @@ const onClear = (ev: MouseEvent) => {
                             v-for="rarity in rarities"
                             :key="rarity"
                             v-model="state.rarities"
-                            :label="rarity"
+                            label=""
                             :value="rarity"
-                        />
+                        >
+                            <div class="rarity-label">
+                                <span>{{ $t(rarity) }}</span>
+                                <Star :color="TokenRarityColorEnum[rarity]" />
+                            </div>
+                        </BaseCheckbox>
                     </FormField>
 
                     <FormField label="f_size" name="size">
@@ -234,6 +241,12 @@ const onClear = (ev: MouseEvent) => {
     }
 }
 
+.rarity-label {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
 .popup {
     position: absolute;
     z-index: 900;

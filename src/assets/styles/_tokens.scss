@@ -70,6 +70,7 @@ $width-xxl: 410px;
     display: grid;
     grid-template-columns: 50px 1fr;
     gap: 1.5rem;
+    align-items: center;
 
     figure {
         position: relative;

@@ -15,7 +15,7 @@ export default defineConfig({
         __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     },
     server: {
-        host: 'maladum.test',
+        host: process.env.HTTPS ? 'maladum.test' : 'localhost',
         open: true,
         port: 8765,
     },
@@ -35,7 +35,7 @@ export default defineConfig({
     },
     plugins: [
         vue(),
-        mkcert(),
+        process.env.HTTPS ? mkcert() : null,
         createHtmlPlugin({
             minify: false,
             pages: [

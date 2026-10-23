@@ -10,6 +10,13 @@ export type ItemDescription = string
 
 export type TokenRarity = 'common' | 'uncommon' | 'rare' | 'exclusive'
 
+export enum TokenRarityColorEnum {
+    common = 'green',
+    uncommon = 'yellow',
+    rare = 'blue',
+    exclusive = 'white',
+}
+
 export const SIZE_NUMBERS = {
     xxs: 0,
     xs: 1,

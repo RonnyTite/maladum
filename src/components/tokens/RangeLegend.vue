@@ -13,7 +13,7 @@ const text = computed(() => {
     const result = [t('ranged')]
     let distance = 1
     for (const range of props.range) {
-        result.push(t(`ranged_${distance}`, range))
+        result.push(t(`ranged_${distance}`, { dice: range }))
         distance++
     }
     return result.join('<br><br>')
